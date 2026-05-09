@@ -1,0 +1,15 @@
+# MATLAB generated files
+slprj/
+*.asv
+*.slxc
+*.mex*
+*.log
+*.tmp
+
+# MATLAB Editor backup files
+*~
+
+# OS and workspace files
+.DS_Store
+Thumbs.db
+Desktop.ini
