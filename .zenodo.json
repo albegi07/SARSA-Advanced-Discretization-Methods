@@ -1,0 +1,14 @@
+{
+  "title": "Control Design for Wind Turbine",
+  "description": "This repository contains MATLAB code for wind turbine control using SARSA and post-analysis scripts for evaluating discretization methods.",
+  "creators": [
+    {
+      "name": "MathWorks"
+    }
+  ],
+  "publication_date": "2025-01-01",
+  "license": "MIT",
+  "keywords": ["wind turbine", "control", "reinforcement learning", "SARSA", "MATLAB", "Simulink"],
+  "upload_type": "software",
+  "access_right": "open"
+}

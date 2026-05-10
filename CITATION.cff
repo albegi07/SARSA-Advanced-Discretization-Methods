@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Control Design for Wind Turbine"
+authors:
+- name: "MathWorks"
+year: 2025
+license: MIT
+url: "https://nl.mathworks.com/help/control/ug/wind-turbine-control-design.html"
