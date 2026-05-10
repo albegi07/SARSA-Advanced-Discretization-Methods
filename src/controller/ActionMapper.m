@@ -1,17 +1,6 @@
 classdef ActionMapper
     % ActionMapper Q-learning agent class.
-    %
-    % Detailed Description:
-    %   This class is designed to train a neural network for control of a wind turbine
-    %
-    % Notes:
-    %   This clas is created in order to facilitate the implementation of federated learning algorithms in Matlab
-    %
-    % Author:
-    %   Alberto Gil Macia, agm945@alumno.uned.es
-    %
-    % Version:
-    %   1.0 18/01/2025 Initial version
+
     properties
         action_space
     end

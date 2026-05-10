@@ -2,9 +2,9 @@ clear;
 close all;
 
 %% 1. Configuration & Data Loading
-result_data_1 = 'results/sarsa_A_1_8_150_episodes_weibull20260125_181157.mat';
-result_data_2 = 'results/sarsa_A_150_episodes_weibull20260118_183326.mat';
-result_data_3 = 'results/sarsa_A_0_6_150_episodes_weibull20260125_181712.mat'; % Update with your filename
+result_data_1 = 'training_results/sarsa_A_1_8_150_episodes_weibull20260125_181157.mat';
+result_data_2 = 'training_results/sarsa_A_150_episodes_weibull20260118_183326.mat';
+result_data_3 = 'training_results/sarsa_A_0_6_150_episodes_weibull20260125_181712.mat'; % Update with your filename
 
 % Load data into a cell array for easier iteration
 files = {result_data_1, result_data_2, result_data_3};
@@ -98,7 +98,7 @@ for f = 1:num_files
     end
 end
 
-%% 5. Target and ±1% band
+%% 5. Target and 1% band
 % Desired power reference
 yline(target_power, '--k', 'Desired Power = 1.5 MW', ...
     'LineWidth', 1.2, 'LabelHorizontalAlignment', 'left');
@@ -125,6 +125,3 @@ set(gca, 'FontSize', 11);
 ticks = get(gca, 'YTick');
 set(gca, 'YTickLabel', ticks/1e6);
 
-%% 7. Export
-exportgraphics(gcf, 'power_output_comparison_3sets.pdf', ...
-    'ContentType', 'vector', 'Resolution', 400);

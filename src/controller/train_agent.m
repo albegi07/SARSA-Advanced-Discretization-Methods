@@ -51,8 +51,8 @@ for i = 1:numberOfIterations
     simResults(i) = simOut;
 end
 
-AgentsFactory.getInstance().saveAgents('sarsa_agent_A_1_8');
+%AgentsFactory.getInstance().saveAgents('sarsa_agent_A_1_8');
 
-timestamp = datetime('now','Format','yyyyMMdd_HHmmss');
-filename = fullfile(projectRoot, 'results', "sarsa_A_1_8_150_episodes" + string(timestamp) + ".mat");
-save(filename, 'simResults');
+%timestamp = datetime('now','Format','yyyyMMdd_HHmmss');
+%filename = fullfile(projectRoot, 'results', "sarsa_A_1_8_150_episodes" + string(timestamp) + ".mat");
+%save(filename, 'simResults');

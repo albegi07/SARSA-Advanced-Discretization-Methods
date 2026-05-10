@@ -66,5 +66,3 @@ text(5,50,'Non-linear methods','Color',[0.3 0.5 0.3],'FontSize',9)
 ax = gca;
 ax.LooseInset = ax.TightInset;
 
-% --- Export figure (vector PDF for LaTeX) ---
-exportgraphics(fig,'complexity_comparison.pdf','ContentType','vector');

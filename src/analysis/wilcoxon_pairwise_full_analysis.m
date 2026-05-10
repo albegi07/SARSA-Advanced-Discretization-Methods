@@ -2,7 +2,7 @@
 clear; close all; clc;
 
 projectRoot = getProjectRoot();
-folder = fullfile(projectRoot, 'Q-Learning', 'ModelAnalysisOutput');
+folder = fullfile(projectRoot, 'results_weibull_3');
 models = {'exponential', 'uniform', 'quadratic', 'mu_law', 'A_law'};
 wind_types = {'uniform', 'weibull'};
 
@@ -14,8 +14,6 @@ set(groot, 'DefaultLegendInterpreter', 'latex');
 files = dir(fullfile(folder, '*.mat'));
 
 TARGET_POWER_MW = 1.5; 
-
-
 
 data_container = struct();
 
@@ -150,7 +148,7 @@ for i = 1:numel(uniformIndices)
     for j = 1:N
         if uIdx == j, continue; end
         
-        % Optional: Only compare within the same wind type (e.g., Uniform-U vs Expo-U)
+        % Only compare within the same wind type (e.g., Uniform-U vs Expo-U)
         % if ~strcmp(data_container.(keys{uIdx}).wind, data_container.(keys{j}).wind), continue; end
 
         [p_val, ~, stats] = ranksum(data_container.(keys{uIdx}).rmse, ...

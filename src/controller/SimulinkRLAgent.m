@@ -1,15 +1,5 @@
 % Simulink system for reinforcement learning agent
-%
-% Detailed Description:
-%   Implements the interface between the Simulink RL subsystem and the
-%   Matlab implementation
-%
-% Author:
-%   Alberto Gil Macia, albegi07@ucm.es
-%
-% Version:
-%   1.0 18/01/2025 Initial version
-%   2.0 23/12/2025 Refactor code
+
 classdef SimulinkRLAgent< matlab.System
     
     properties (Access = private)

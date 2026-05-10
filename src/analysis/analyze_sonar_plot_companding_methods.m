@@ -3,7 +3,7 @@ projectRoot = getProjectRoot();
 
 %% Configuration & Setup
 % Folder name from your image
-folder = fullfile(projectRoot, 'mu_comparison'); 
+folder = fullfile(projectRoot, 'results_mu_law_cmp'); 
 
 % Define the three methods identified in the file names
 methods = {'mu_weibull_5020', 'mu_weibull_10020', 'mu_weibull_409620'};

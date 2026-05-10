@@ -1,9 +1,9 @@
 clear; close all;
 projectRoot = getProjectRoot();
 
-folder = fullfile(projectRoot, 'ModelAnalysisOutputSine_0_2_rad_s');
+folder = fullfile(projectRoot, 'results_sin_0_2_rad_s');
 
-% Define model prefixes (longest → shortest to avoid substring conflicts)
+% Define model prefixes (longest to shortest to avoid substring conflicts)
 models = {'exponential', 'uniform', 'quadratic', 'mu_law', 'A_law'};
 wind_types = {'uniform', 'weibull'};
 

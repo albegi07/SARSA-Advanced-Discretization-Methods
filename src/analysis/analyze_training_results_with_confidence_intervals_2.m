@@ -1,8 +1,8 @@
 clear;
 close all;
 
-result_data_1 = 'results/sarsa_exponential_150_episodes20251231_161906.mat';
-result_data_2 = 'results/sarsa_exponential_150_episodes_weibull20260119_204005.mat';
+result_data_1 = 'training_results/sarsa_exponential_150_episodes20251231_161906.mat';
+result_data_2 = 'training_results/sarsa_exponential_150_episodes_weibull20260119_204005.mat';
 
 data1 = load(result_data_1);  
 ResultData1 = data1.simResults;
@@ -19,7 +19,7 @@ std_power1  = zeros(num_episodes, 1);
 mean_power2 = zeros(num_episodes, 1);
 std_power2  = zeros(num_episodes, 1);
 
-% ──────────────── Compute mean & std ────────────────
+%  Compute mean & std 
 for i = 1:num_episodes
     % Dataset 1
     p = squeeze(ResultData1(i).get('power_output').Data(1,1,200:end));
@@ -42,7 +42,7 @@ for i = 1:num_episodes
     end
 end
 
-% ──────────────── Smoothing ────────────────
+%  Smoothing 
 window_size = 10;
 
 smoothed_mean1  = movmean(mean_power1, window_size, 'omitnan');
@@ -53,9 +53,9 @@ smoothed_mean2  = movmean(mean_power2, window_size, 'omitnan');
 smoothed_upper2 = movmean(mean_power2 + std_power2, window_size, 'omitnan');
 smoothed_lower2 = movmean(mean_power2 - std_power2, window_size, 'omitnan');
 
-% ────────────────────────────────────────────────
+% 
 %               Plotting
-% ────────────────────────────────────────────────
+% 
 figure;
 set(gcf, 'Position', [100 100 880 520]);
 hold on;
@@ -76,7 +76,7 @@ fill([episodes, fliplr(episodes)], ...
 p2 = plot(episodes, smoothed_mean2, 'Color', [0.9 0.1 0.1], ...
     'LineWidth', 2.1, 'DisplayName', 'SARSA (Exponential + Weibull)');
 
-% ──────────────── Target & ±1% band ────────────────
+%  Target & ±1% band 
 target_power = 1.5e6;
 tol = 0.01 * target_power;
 
@@ -91,7 +91,7 @@ fill([0 num_episodes num_episodes 0], ...
 yline(target_power+tol, '--', 'Color', [0.4 0.4 0.4], 'LineWidth', 1);
 yline(target_power-tol, '--', 'Color', [0.4 0.4 0.4], 'LineWidth', 1);
 
-% ──────────────── Irreversible convergence detection ────────────────
+%  Irreversible convergence detection 
 in_band_1 = abs(smoothed_mean1 - target_power) <= tol;
 in_band_2 = abs(smoothed_mean2 - target_power) <= tol;
 
@@ -112,7 +112,7 @@ for k = 1:num_episodes
     end
 end
 
-% ──────────────── Mark convergence points ────────────────
+%  Mark convergence points 
 if ~isnan(conv_ep_1)
     xline(conv_ep_1, ':', 'Color', [0 0.4 0.8], 'LineWidth', 1.6);
     plot(conv_ep_1, smoothed_mean1(conv_ep_1), 'o', ...
@@ -129,7 +129,6 @@ if ~isnan(conv_ep_2)
         sprintf('Ep %d', conv_ep_2), 'Color', [0.9 0.1 0.1]);
 end
 
-% ──────────────── Cosmetics ────────────────
 xlabel('Training Episode', 'FontSize', 13);
 ylabel('Average Power Output (MW)', 'FontSize', 13);
 title('Smoothed Mean Power per Episode ± 1 SD', 'FontSize', 14);
@@ -140,6 +139,3 @@ xlim([0 150]);
 set(gca, 'YTickLabel', get(gca,'YTick')/1e6);
 set(gca, 'FontSize', 11);
 
-% Export
-exportgraphics(gcf, 'power_output_comparison_std.pdf', ...
-    'ContentType', 'vector', 'Resolution', 400);

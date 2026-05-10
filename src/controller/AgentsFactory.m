@@ -1,14 +1,4 @@
 % AgentsFactory Federated server class.
-%
-% Detailed Description:
-% Takes the Q-learning models from the agent and averages them to create a global model
-%
-% Author:
-% Alberto Gil Macia, albegi07@ucm.es
-%
-% Version:
-% 1.0 18/01/2025 Initial version
-% 2.0 23/12/2025 Refactor code
 
 classdef AgentsFactory < handle
     properties (Access = private)

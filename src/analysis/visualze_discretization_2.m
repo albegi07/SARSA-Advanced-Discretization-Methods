@@ -1,16 +1,10 @@
-% Fixed visualization script for discretization methods
-% Now includes Weibull wind speed discretization and its probability density function
-% + Improved comparative PDF plot using controlled kernel bandwidth for clear, smooth curves
-
 close all
 
-% Generation functions for P_error (with quadratic fixed)
 function sequence = generate_sequence_uniform()
     sequence = -1500000:(3000000/30):1500000;
 end
 
 function sequence = generate_sequence_quadratic()
-    % Fixed: Signed quadratic to preserve negative values symmetrically
     range = -15:1:15;
     sequence = 7000 * range .* abs(range); % = 7000 * sign(range) .* range.^2
 end
@@ -175,13 +169,6 @@ legend({'Weibull PDF', 'Discrete Bin Centers'}, 'Location', 'northeast', 'FontSi
 set(gca, 'FontSize', 13, 'LineWidth', 1.2);
 
 disp('Weibull plots created.');
-
-% ------------------ Improved Comparative Empirical PDFs for P_error Methods ------------------
-% ------------------ Corrected Comparative Density Plots ------------------
-% Instead of ksdensity (which treats levels as data points), 
-% we plot the "Level Density" = 1 / (local step size).
-% ------------------ Smoothed Comparative PDF around Zero ------------------
-% Focuses on the density of representation levels near the origin
 
 sequences = {seq_uniform, seq_quadratic, seq_exponential, seq_mu, seq_a};
 labels = {'Uniform', 'Quadratic', 'Exponential', 'μ-Law', 'A-Law'};

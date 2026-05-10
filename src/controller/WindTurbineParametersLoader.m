@@ -2,6 +2,7 @@
 clear; close all; clc;
 
 projectRoot = getProjectRoot();
+addpath(genpath(fullfile(projectRoot, 'src')));
 
 % Load Cp data (same as you had)
 load(fullfile(projectRoot, 'WindCpData.mat'), 'Bgrid', 'TSRgrid', 'CpData')

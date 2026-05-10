@@ -1,17 +1,6 @@
 classdef ObservationMapper < handle
     % ObservationMapper for Q-learning agent class.
-    %
-    % Detailed Description:
-    %   This class is designed to train a neural network for control of a wind turbine
-    %
-    % Notes:
-    %   This class is created in order to facilitate the implementation of federated learning algorithms in Matlab
-    %
-    % Author:
-    %   Alberto Gil Macia, agm945@alumno.uned.es
-    %
-    % Version:
-    %   1.0 18/01/2025 Initial version
+
     properties
         p_error_sequence
         wind_sequence

@@ -7,7 +7,7 @@ addpath(genpath(fullfile(projectRoot, 'src')));
 %% =======================
 %  SETTINGS & PATHS
 % =======================
-folderPath = fullfile(projectRoot, 'ModelAnalysisOutput'); 
+folderPath = fullfile(projectRoot, 'results_weibull_3'); 
 distTypes = {'exponential', 'uniform', 'quadratic', 'mu_law', 'A_law'};
 P_ref = 1.5;  
 idx_start = 300; 
@@ -49,16 +49,13 @@ for w = 1:2
     end
 end
 
-%% =======================
-%  VISUALIZATION (PUBLICATION READY)
-% =======================
+
 error_labels = {'Exponential','Uniform','Quadratic','\mu-law','A-law'};
 wind_labels  = {'Uniform Wind','Weibull Wind'};
 metrics      = {J_RMSE, J_IAE, J_RMSU, J_TV, J_MPO};
 titles       = {'RMSE [MW]', 'IAE [MW·s]', 'RMS Control [rad]', 'TV Control [rad]', 'MPO [MW]'};
 
 % Custom Blue-White-Red Colormap
-% This creates a smooth transition for positive data ranges
 custom_bwr = [linspace(0, 1, 128)', linspace(0, 1, 128)', linspace(1, 1, 128)';  % Deep Blue to White
               linspace(1, 1, 128)', linspace(1, 0, 128)', linspace(1, 0, 128)']; % White to Deep Red
 

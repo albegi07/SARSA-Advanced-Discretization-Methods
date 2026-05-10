@@ -1,8 +1,8 @@
 clear;
 close all;
 
-result_data_1 = 'results/sarsa_exponential_150_episodes20251231_161906.mat';
-result_data_2 = 'results/sarsa_exponential_150_episodes_weibull20260118_174017.mat';
+result_data_1 = 'training_results/sarsa_exponential_150_episodes20251231_161906.mat';
+result_data_2 = 'training_results/sarsa_exponential_150_episodes_weibull20260118_174017.mat';
 
 data1 = load(result_data_1);  
 ResultData1 = data1.simResults;

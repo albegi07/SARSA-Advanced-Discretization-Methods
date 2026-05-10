@@ -1,5 +1,3 @@
-% Fixed visualization script for discretization methods
-% μ-law and A-law use the exact discretization values without normalization
 clear; close all;
 
 %% ------------------ Generation functions for P_error ------------------

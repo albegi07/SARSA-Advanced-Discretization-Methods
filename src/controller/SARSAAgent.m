@@ -1,17 +1,5 @@
-% QLearningAgent Q-learning agent class.
-%
-% Detailed Description:
-%   This class is designed to train a Q learning agent for control of a wind turbine
-%
-% Notes:
-%   This class is created in order to facilitate the implementation of federated learning algorithms in Matlab
-%
-% Author:
-%   Alberto Gil Macia, albegi07@ucm.es
-%
-% Version:
-%   1.0 18/01/2025 Initial version
-%   2.0 23/12/2025 Refactor code
+% SARSAAgent Q-learning agent class.
+
 classdef SARSAAgent < handle
     
     properties      

@@ -1,7 +1,10 @@
 clear;
 close all;
 
-result_data_1 = 'results/sarsa_exponential_150_episodes20251231_161906.mat';
+projectRoot = getProjectRoot();
+addpath(genpath(fullfile(projectRoot, 'src')));
+
+result_data_1 = 'training_results/sarsa_exponential_150_episodes20251231_161906.mat';
 
 data1 = load(result_data_1);  
 ResultData1 = data1.simResults;
