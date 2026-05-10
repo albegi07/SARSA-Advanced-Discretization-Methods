@@ -1,14 +1,30 @@
 {
-  "title": "Control Design for Wind Turbine",
-  "description": "This repository contains MATLAB code for wind turbine control using SARSA and post-analysis scripts for evaluating discretization methods.",
+  "title": "Code and Data for: Non-linear and probabilistic state discretization functions for enhanced discrete reinforcement learning: application on wind turbine pitch control",
+  "description": "This repository contains the supplemental research artifacts for the manuscript titled 'Non-linear and probabilistic state discretization functions for enhanced discrete reinforcement learning: application on wind turbine pitch control.' The provided materials ensure the reproducibility of the proposed discretization methods and their application to wind turbine pitch control systems.",
   "creators": [
     {
-      "name": "MathWorks"
+      "name": "Alberto Gil-Maciá",
+      "affiliation": "Universidad Complutense de Madrid"
+    },
+    {
+      "name": "J. Enrique Sierra-García",
+      "affiliation": "University of Burgos"
+    },
+    {
+      "name": "Matilde Santos",
+      "affiliation": "Universidad Complutense de Madrid"
     }
   ],
-  "publication_date": "2025-01-01",
+  "publication_date": "2026-10-05",
   "license": "MIT",
-  "keywords": ["wind turbine", "control", "reinforcement learning", "SARSA", "MATLAB", "Simulink"],
+  "keywords": [
+    "Explainable AI",
+    "Convergence",
+    "Computational Complexity",
+    "Discretization",
+    "Companding methods",
+    "Reinforcement Learning"
+  ],
   "upload_type": "software",
-  "access_right": "open"
+  "access_right": "restricted"
 }

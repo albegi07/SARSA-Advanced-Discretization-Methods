@@ -1,9 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "Control Design for Wind Turbine"
+title: "Code and Data for: Non-linear and probabilistic state discretization functions for enhanced discrete reinforcement learning: application on wind turbine pitch control"
 authors:
-- name: "MathWorks"
-year: 2025
+- name: "Alberto Gil-Maciá"
+  affiliation: "Universidad Complutense de Madrid"
+- name: "J. Enrique Sierra-García"
+  affiliation: "University of Burgos"
+- name: "Matilde Santos"
+  affiliation: "Universidad Complutense de Madrid"
+year: 2026
 license: MIT
-url: "https://nl.mathworks.com/help/control/ug/wind-turbine-control-design.html"
